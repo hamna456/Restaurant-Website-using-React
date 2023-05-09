@@ -19,9 +19,6 @@ Features
 * Search Bar: allows customers to search for specific items in the menu.
 * Header and Footer: contains navigation links and social media links.
 
-Deployment
---------------- 
-          The project is hosted on GitHub and is open source, so anyone can contribute to it. To run the project, clone the repository and run npm start in the terminal. The website can be deployed using platforms such as Netlify, GitHub Pages, or Heroku.
 
 Getting Started
 --------------- 
