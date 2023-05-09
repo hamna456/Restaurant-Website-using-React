@@ -1,13 +1,21 @@
 import React, { useState, useRef } from 'react';
 import Logo from '../assets/images/logo.png';
-import { cart as cartData } from '../Data';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { cartActions } from '../store/cartSlice';
+
+
 
 const Navbar = () => {
+  const dispatch = useDispatch();
   const navbarRef = useRef();
   const searchRef = useRef();
   const cartRef = useRef();
 
-  const [cart, setCart] = useState(cartData);
+  // const [cart, setCart] = useState(cartData);
+  const cart = useSelector(state => state.cart.cart);
+
+
 
   const navbarHandler = () => {
     navbarRef.current.classList.toggle('active');
@@ -28,9 +36,11 @@ const Navbar = () => {
   };
 
   const removeCartItemHandler = (index) => {
-    const newCart = [...cart];
-    newCart.splice(index, 1);
-    setCart(newCart);
+    // const newCart = [...cart];
+    // newCart.splice(index, 1);
+    // setCart(newCart);
+    dispatch(cartActions.removeFromCart(index));
+
   };
 
   return (
