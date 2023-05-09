@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { menu } from "../Data";
+import { useSelector } from "react-redux";
+import { cartActions } from '../store/cartSlice';
+import { useDispatch } from "react-redux";
 
 const Menu = () => {
+  const dispatch = useDispatch();
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const cart = useSelector(state => state.cart.cart);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category.toLowerCase());
@@ -12,16 +17,16 @@ const Menu = () => {
     const speech = new SpeechSynthesisUtterance(message);
     speechSynthesis.speak(speech);
   };
-  
 
-  const handleAddToCartClick = (name, price) => {
-    const message = `Added ${name} to cart. Price is ${price} .`;
+
+  const handleAddToCartClick = (item) => {
+    const message = `Added ${item.name} to cart. Price is ${item.price} .`;
     const speech = new SpeechSynthesisUtterance(message);
     speechSynthesis.speak(speech);
+    console.log(item);
+    console.log(cart);
+    dispatch(cartActions.addToCart(item));
   };
-
-  
-
   const filteredMenu = menu.filter((item) => {
     if (selectedCategory === "all") {
       return true;
@@ -56,7 +61,7 @@ const Menu = () => {
               </div>
               <button
                 className="btn"
-                onClick={() => handleAddToCartClick(item.name, item.price)}
+                onClick={() => handleAddToCartClick(item)}
               >
                 add to cart
               </button>

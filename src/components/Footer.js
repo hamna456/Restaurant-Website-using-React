@@ -3,15 +3,15 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <section class="footer">
-        <div class="share">
-          <a href="#" class="fab fa-facebook-f"></a>
-          <a href="#" class="fab fa-twitter"></a>
-          <a href="#" class="fab fa-instagram"></a>
-          <a href="#" class="fab fa-linkedin"></a>
+      <section className="footer">
+        <div className="share">
+          <a href="#" className="fab fa-facebook-f"></a>
+          <a href="#" className="fab fa-twitter"></a>
+          <a href="#" className="fab fa-instagram"></a>
+          <a href="#" className="fab fa-linkedin"></a>
 
         </div>
-        
+
       </section>
     </>
   );
