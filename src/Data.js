@@ -1,7 +1,3 @@
-import cartImage1 from "./assets/images/menu-1.jpg";
-import cartImage2 from "./assets/images/menu-4.jpg";
-import cartImage3 from "./assets/images/menu-6.jpg";
-import cartImage4 from "./assets/images/menu-3.jpg";
 
 import menuImage1 from "./assets/images/menu-1.jpg";
 import menuImage2 from "./assets/images/menu-2.jpg";
@@ -20,25 +16,6 @@ import reviewImage2 from "./assets/images/pic-1.jpg";
 import reviewImage3 from "./assets/images/pic-1.jpg";
 
 
-
-const cart = [
-    {
-      img: cartImage1,
-    },
-    {
-      img: cartImage2,
-    },
-    {
-      img: cartImage3,
-    },
-    {
-      img: cartImage4,
-    },
-  ];
-
-  
-
-  
 
   const menu = [
     {
@@ -120,4 +97,4 @@ const cart = [
   ];
 
 
-  export {cart, menu, review};
+  export {menu, review};
