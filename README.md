@@ -1,7 +1,7 @@
 Restaurant Website using React
 =============
 
-This project is a fully functional responsive restaurant website built using React. The website comprises multiple pages and incorporates ncorporates a speech synthesis feature to assist customers in selecting menu items.
+This project is a fully functional responsive restaurant website built using React. The website comprises multiple pages and incorporates a speech synthesis feature to assist customers in selecting menu items.
 
 Pages
 --------------- 
